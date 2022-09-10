@@ -18,9 +18,8 @@ app.use("/quiz", quizRouter);
 app.post("/auth/login", (req, res) => {
     const { username, password } = req.body;
     console.log( { username, password} );
+    res.json({username, password, message: "got the values"})
 })
-
-
 
 app.listen(process.env.PORT || PORT, () => {
     console.log("server started....");
