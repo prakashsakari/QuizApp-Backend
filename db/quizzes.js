@@ -1,8 +1,8 @@
-const {v4 : uuid} = require("uuid")
+const { v4: uuid } = require("uuid")
 
 const quizzes = {
     data: [
-        // 1st Quiz Card
+        // 1st Quiz Card --> will have title, category, description, quiz,
         {
             id: uuid(),
             category: "marvel",
@@ -10,7 +10,7 @@ const quizzes = {
             title: "Marvel",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tristique quis nunc eget rutrum",
             quiz: [
-                // 1st question
+                //1st question and options
                 {
                     id: uuid(),
                     question: "Black Panther is set in which fictional country?",
@@ -21,7 +21,7 @@ const quizzes = {
                         { id: uuid(), option: "Jakanda", isCorrect: false }
                     ]
                 },
-                // 2nd question
+                 //2nd question and options
                 {
                     id: uuid(),
                     question: "Who rescued Tony Stark and Nebula from space?",
@@ -32,7 +32,7 @@ const quizzes = {
                         { id: uuid(), option: "Hulk", isCorrect: false }
                     ]
                 },
-                // 3rd question
+                 //3rd question and options
                 {
                     id: uuid(),
                     question: "Thor's Mjolnir is made from the metal of a dying ___?",
@@ -43,7 +43,7 @@ const quizzes = {
                         { id: uuid(), option: "Sun", isCorrect: false }
                     ]
                 },
-                // 4th question
+                 //4th question and options
                 {
                     id: uuid(),
                     question: "What did Thor say about Jane Foster's catchphrase?",
@@ -56,8 +56,7 @@ const quizzes = {
                 },
             ]
         },
-
-        // 2nd Quiz Card
+        //2nd quiz
         {
             id: uuid(),
             category: "dc",
@@ -107,8 +106,8 @@ const quizzes = {
                 },
             ]
         },
+
     ]
 }
-
 
 module.exports = quizzes;
