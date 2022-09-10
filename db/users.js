@@ -1,7 +1,7 @@
 const { v4: uuid } = require("uuid");
 
 const userdata = {
-    "data": [
+    "users": [
         {
             id: uuid(),
             username: "prakashsakari",
