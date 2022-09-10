@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 app.use("/quiz", quizRouter);
 
 app.use("/auth/login", loginRouter);
-app.use("auth/signup", signupRouter);
+app.use("/auth/signup", signupRouter);
 
 app.listen(process.env.PORT || PORT, () => {
     console.log("server started....");
