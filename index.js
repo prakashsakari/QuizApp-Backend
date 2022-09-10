@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const quizzes = require("./db/quizzes");
+const quizRouter = require("./router/quiz.router");
 
 const app = express(); //Creating a server
 app.use(cors());
@@ -11,9 +12,8 @@ app.get("/", (req, res) => {
     res.send("hello geeks");
 })
 
-app.get("/quiz", (req, res) => {
-    res.send(quizzes.data)
-})
+app.use("/quiz", quizRouter);
+
 
 
 app.listen(process.env.PORT || PORT, () => {
