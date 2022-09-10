@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-const quizzes = require("./db/quizzes");
 const quizRouter = require("./router/quiz.router");
+const userdata = require("./db/users");
 
 const app = express(); //Creating a server
 app.use(cors());
@@ -14,6 +14,11 @@ app.get("/", (req, res) => {
 })
 
 app.use("/quiz", quizRouter);
+
+app.post("/auth/login", (req, res) => {
+    const { username, password } = req.body;
+    console.log( { username, password} );
+})
 
 
 

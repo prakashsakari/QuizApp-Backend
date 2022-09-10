@@ -7,5 +7,4 @@ quizRouter.route("/")
         res.json(quizzes)
     });
 
-
 module.exports = quizRouter;
