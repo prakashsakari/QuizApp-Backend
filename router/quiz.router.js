@@ -4,7 +4,7 @@ const quizzes = require('../db/quizzes');
 
 quizRouter.route("/")
     .get((req, res) => {
-        res.json(quizzes.data)
+        res.json(quizzes)
     });
 
 
