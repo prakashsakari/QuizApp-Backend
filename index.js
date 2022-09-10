@@ -5,6 +5,7 @@ const quizRouter = require("./router/quiz.router");
 
 const app = express(); //Creating a server
 app.use(cors());
+app.use(express.json());
 
 const PORT = 3000;
 
